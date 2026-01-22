@@ -72,8 +72,8 @@ services:
     networks:
       - backend
     # Resource limits for Docker Compose (not Swarm)
-    cpus: 2.0
-    mem_limit: 4G
+    cpus: 1.8
+    mem_limit: 2G
     memswap_limit: 4G
     logging:
       driver: "json-file"
@@ -106,8 +106,8 @@ services:
     command: node dist/src/harness.js --start-docker
     # Resource limits for Docker Compose (not Swarm)
     # Increase if you have more CPU cores/RAM available
-    cpus: 4.0
-    mem_limit: 8G
+    cpus: 1.5
+    mem_limit: 3G
     memswap_limit: 8G
 
   redis:
